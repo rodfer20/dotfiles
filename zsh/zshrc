@@ -267,7 +267,8 @@ _comp_options+=(globdots) # hidden files are included
 
 # Promp Neofetch
 neofetch
-# [trevalkov@archbox]-[~]
+cd "$HOME"
+# [treval@archbox]-[~]
 # >>> |
 # default blue
 # default white 
@@ -317,15 +318,16 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 
 ## Proxy
 # Interception Proxy
-# export http_proxy=http://127.0.0.1:8080/
+#export http_proxy=http://127.0.0.1:8080/
 # Connection Proxy
 # export http_proxy=http://10.10.10.10:1194/
 # --
-# export https_proxy=$http_proxy
-# export ftp_proxy=$http_proxy
-# export rsync_proxy=$http_proxy
-# export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-
+#export https_proxy=$http_proxy
+#export ftp_proxy=$http_proxy
+#export rsync_proxy=$http_proxy
+#export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+alias iproxy="source ~/scripts/iproxy.sh"
+alias lproxy="source ~/scripts/lproxy.sh"
 ## Automation and backups
 export MNT_PATH="/mnt/backup"
 ## Python Requests
@@ -366,7 +368,9 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias du="du -h"
 # utils
+alias gdbc="gdb -x $HOME/.gdbinit_cyrus"
 alias healthcheck="~/scripts/healthcheck.py"
+alias clean="~/scripts/arch_clean.sh"
 alias pacman_healthcheck="~/scripts/pacman_healthcheck.sh"
 alias broken-pacman="echo 'Y' | sudo pacman -Syyu archlinux-keyring"
 alias txtread="~/scripts/txt_reader.py"
@@ -390,7 +394,7 @@ alias toMp3="~/scripts/toMp3.sh"
 # containers
 alias hackbox="~/scripts/hackbox_script.py"
 # code 
-alias initpy="~/scripts/init_main.py.sh"
+alias initpy="~/scripts/init_py.sh"
 # git
 alias gitinit="~/scripts/git_init.sh"
 alias gitpush='~/scripts/git_push.sh'
