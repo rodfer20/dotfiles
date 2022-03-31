@@ -12,7 +12,7 @@ endif
 
 let g:vim_bootstrap_langs = "c,go,haskell,html,python"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
-let g:vim_bootstrap_theme = "molokai"
+let g:vim_bootstrap_theme = "malokai"
 let g:vim_bootstrap_frams = ""
 
 if !filereadable(vimplug_exists)
@@ -45,8 +45,8 @@ Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
+"" Plug 'Yggdroot/indentLine' // Broken
 Plug 'dense-analysis/ale'
-Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasr/molokai'
@@ -99,7 +99,6 @@ Plug 'mattn/emmet-vim'
 
 " python
 "" Python Bundle
-Plug 'davidhalter/jedi-vim'
 
 
 "*****************************************************************************
