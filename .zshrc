@@ -143,7 +143,7 @@ add-zsh-hook preexec mzc_termsupport_preexec
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.#
+# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -159,7 +159,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -184,11 +184,11 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765£
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -221,7 +221,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -268,13 +268,11 @@ _comp_options+=(globdots) # hidden files are included
 # Promp Neofetch
 neofetch
 cd "$HOME"
-# [treval@archbox]-[~]
+# [trevalkov@hackintosh]-[~]
 # >>> |
-# default blue
-# default white 
 autoload -U colors && colors
-PS1="%{$fg[blue]%}%B[%b%{$fg[white]%}%n%{$fg[blue]%}%B@%b%{$fg[white]%}%m%{$fg[blue]%}%B]-%b%{$fg[blue]%}%B[%b%{$fg[white]%}%~%{$fg[blue]%}%B]%b
-%{$fg[blue]%}%B>>>%b%{$reset_color%} "
+PS1="%{$fg[cyan]%}%B[%b%{$fg[green]%}%n%{$fg[cyan]%}%B@%b%{$fg[green]%}%m%{$fg[cyan]%}%B]-%b%{$fg[cyan]%}%B[%b%{$fg[green]%}%~%{$fg[cyan]%}%B]%b
+%{$fg[cyan]%}%B>>>%b%{$reset_color%} "
 
 # ZSH history file
 HISTSIZE=100
@@ -316,23 +314,6 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Proxy
-# Interception Proxy
-#export http_proxy=http://127.0.0.1:8080/
-# Connection Proxy
-# export http_proxy=http://10.10.10.10:1194/
-# --
-#export https_proxy=$http_proxy
-#export ftp_proxy=$http_proxy
-#export rsync_proxy=$http_proxy
-#export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-#alias iproxy="source ~/scripts/iproxy.sh"
-#alias lproxy="source ~/scripts/lproxy.sh"
-## Automation and backups
-export MNT_PATH="/mnt/backup"
-## Python Requests
-#export REQUESTS_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
-# Default browser
 export BROWSER="firefox"
 ## Paths
 #export LD_PRELOAD=""
@@ -368,45 +349,8 @@ alias dd="dd status=progress"
 alias rm="rm -i"
 alias mv="mv -i"
 alias du="du -h"
-# utils
-alias gdbc="gdb -x $HOME/.gdbinit_cyrus"
-alias healthcheck="~/scripts/healthcheck.py"
-alias clean="~/scripts/arch_clean.sh"
-alias pacman_healthcheck="~/scripts/pacman_healthcheck.sh"
-alias broken-pacman="echo 'Y' | sudo pacman -Syyu archlinux-keyring"
-alias txtread="~/scripts/txt_reader.py"
-alias netspeed="~/scripts/net_speed.py"
-alias termalmap="~/scripts/termal_map.sh"
-alias pstree="ps axjf | less"
-alias iplan="~/scripts/iplan.sh"
-alias tree="~/scripts/tree/tree"
-alias backup="~/scripts/backup.sh"
-alias checksumdir="source ~/scripts/lazy/venv/bin/activate && python ~/scripts/lazy/__main__.py checksumdir 1 2; deactivate"
-alias rm-wspaces="~/scripts/remove-whitespaces.py"
-alias spellchecker="source ~/scripts/lazy/venv/bin/activate && python ~/scripts/lazy/__main__.py spellchecker 1 2; deactivate"
 alias metapurge="~/scripts/purge_metadata.sh"
-# entertainment
-alias hackernews="python3 ~/scripts/hackernews_cli.py"
-alias ytdl-video="~/scripts/ytdl-video.sh"
-alias ytdl-playlist="~/scripts/ytdl-playlist.sh" [
-# remove? -f "/Users/rodrigolf/.ghcup/env" ] && source "/Users/rodrigolf/.ghcup/env" # ghcup-env
-alias toMp3="~/scripts/toMp3.sh"
-# containers
-alias hackbox="~/scripts/hackbox_script.py"
-# code 
 alias initpy="~/scripts/init_py.sh"
-# git
 alias gitinit="~/scripts/git_init.sh"
 alias gitpush='~/scripts/git_push.sh'
 alias gitfork='~/scripts/git_fork.sh'
-# tools
-alias listener="sudo rlwrap nc -lvnp 443"
-alias airgeddon="~/tools/airgeddon-run.sh"
-# cloud
-alias awsa="aws --no-sign-request"
-# vms
-#alias debi="~/scripts/debi_vbox_mger.py"
-# wifi
-#alias wifiprobe="~/scripts/wifi_probe.py"
-alias duf="du -ach --time"
-alias lsd="du -d 1 --time"
