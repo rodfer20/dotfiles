@@ -143,7 +143,7 @@ add-zsh-hook preexec mzc_termsupport_preexec
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation.#
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -159,7 +159,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -184,11 +184,11 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765£
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -221,7 +221,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -265,13 +265,17 @@ compinit
 _comp_options+=(globdots) # hidden files are included
 
 
-# Promp Neofetch
-neofetch
-cd "$HOME"
-# [trevalkov@hackintosh]-[~]
+# Promp Neofetch on iterm2
+if [ "$ITERM_SESSION_ID" ];then
+    neofetch
+fi
+#cd "$HOME"
+# [treval@archbox]-[~]
 # >>> |
+# default cyan
+# default white 
 autoload -U colors && colors
-PS1="%{$fg[cyan]%}%B[%b%{$fg[green]%}%n%{$fg[cyan]%}%B@%b%{$fg[green]%}%m%{$fg[cyan]%}%B]-%b%{$fg[cyan]%}%B[%b%{$fg[green]%}%~%{$fg[cyan]%}%B]%b
+PS1="%{$fg[cyan]%}%B[%b%{$fg[white]%}%n%{$fg[cyan]%}%B@%b%{$fg[white]%}%m%{$fg[cyan]%}%B]-%b%{$fg[cyan]%}%B[%b%{$fg[white]%}%~%{$fg[cyan]%}%B]%b
 %{$fg[cyan]%}%B>>>%b%{$reset_color%} "
 
 # ZSH history file
@@ -314,6 +318,7 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
+# Default browser
 export BROWSER="firefox"
 ## Paths
 #export LD_PRELOAD=""
@@ -349,8 +354,9 @@ alias dd="dd status=progress"
 alias rm="rm -i"
 alias mv="mv -i"
 alias du="du -h"
-alias metapurge="~/scripts/purge_metadata.sh"
-alias initpy="~/scripts/init_py.sh"
-alias gitinit="~/scripts/git_init.sh"
-alias gitpush='~/scripts/git_push.sh'
-alias gitfork='~/scripts/git_fork.sh'
+alias duf="du -ach"
+alias lsd="du -d 1"
+# git
+alias gitinit="~/Scripts/git_init.sh"
+alias gitpush='~/Scripts/git_push.sh'
+alias gitfork='~/Scripts/git_fork.sh'
