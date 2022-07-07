@@ -329,7 +329,11 @@ export PATH=$PATH:"$HOME/.local/bin"
 # go
 export PATH=$PATH:"$HOME/go/bin"
 # ruby
-export PATH=$PATH:"$HOME/.gem/ruby/3.0.0/bin"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#export PATH=$PATH:"$HOME/.gem/ruby/3.0.0/bin"
 
 ## Alias section
 # basic commands
@@ -360,3 +364,5 @@ alias lsd="du -d 1"
 alias gitinit="~/Scripts/git_init.sh"
 alias gitpush='~/Scripts/git_push.sh'
 alias gitfork='~/Scripts/git_fork.sh'
+# vms
+alias sshkali="~/Scripts/ssh_vm_Kali.py"
