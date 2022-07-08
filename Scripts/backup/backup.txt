@@ -1,0 +1,8 @@
+Documents
+Workspace
+Music
+Virtualbox/Kali
+VMs
+Scripts
+.vimrc
+.zshrc

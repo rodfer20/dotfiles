@@ -360,9 +360,13 @@ alias mv="mv -i"
 alias du="du -h"
 alias duf="du -ach"
 alias lsd="du -d 1"
+# data
+alias purgemeta="~/Scripts/data/purge_metadata.sh"
 # git
-alias gitinit="~/Scripts/git_init.sh"
-alias gitpush='~/Scripts/git_push.sh'
-alias gitfork='~/Scripts/git_fork.sh'
+alias gitinit="~/Scripts/git/git_init.sh"
+alias gitpush="~/Scripts/git/git_push.sh"
+alias gitfork="~/Scripts/git/git_fork.sh"
+# backup
+alias backup="~/Scripts/backup/backup.py"
 # vms
-alias sshkali="~/Scripts/ssh_vm_Kali.py"
+alias sshkali="~/Scripts/vms/ssh_vm_Kali.py"
