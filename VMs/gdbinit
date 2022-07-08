@@ -8,3 +8,6 @@ set confirm off
 #git clone https://github.com/longld/peda.git ~/.config/peda
 source ~/.config/peda/peda.py
 
+#geff debug extensions
+#wget -O ~/.config/gef/gef.py -q https://github.com/hugsy/gef/raw/master/gef.py
+#source ~/.config/gef/gef.py

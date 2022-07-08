@@ -369,4 +369,5 @@ alias gitfork="~/Scripts/git/git_fork.sh"
 # backup
 alias backup="~/Scripts/backup/backup.py"
 # vms
+alias hackbox="~/Scripts/vms/hackbox_script.py"
 alias sshkali="~/Scripts/vms/ssh_vm_Kali.py"
