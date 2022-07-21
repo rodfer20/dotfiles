@@ -328,6 +328,8 @@ export PATH=$PATH:"$HOME/bin:/usr/lib/ccache/bin/:/sbin:/usr/bin:/usr/sbin:/usr/
 export PATH=$PATH:"$HOME/.local/bin"
 # go
 export PATH=$PATH:"$HOME/go/bin"
+# java
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # ruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
@@ -360,14 +362,17 @@ alias mv="mv -i"
 alias du="du -h"
 alias duf="du -ach"
 alias lsd="du -d 1"
-# data
-alias purgemeta="~/Scripts/data/purge_metadata.sh"
+# bytes
+alias purgemeta="~/Scripts/bytes/purge_metadata.sh"
+# web
+alias firefox="open -a 'Firefox'"
+alias hackernews="python3 ~/Scripts/Web/hackernews_cli.py"
 # git
 alias gitinit="~/Scripts/git/git_init.sh"
 alias gitpush="~/Scripts/git/git_push.sh"
 alias gitfork="~/Scripts/git/git_fork.sh"
 # backup
-alias backup="~/Scripts/backup/backup.py"
+alias backup="python3 ~/Scripts/backup/backup.py"
 # vms
 alias hackbox="~/Scripts/vms/run-hackbox.sh"
-alias sshkali="~/Scripts/vms/ssh_vm_Kali.py"
+alias sshkali="python3 ~/Scripts/vms/ssh_vm_Kali.py"
